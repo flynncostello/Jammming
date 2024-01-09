@@ -1,0 +1,24 @@
+.Search-results-div {
+    background-color: rgba(23, 4, 53, 0.7); /* Dark purple with opacity */
+    width: 50%;
+    min-height: 500px;
+    color: white;
+}
+
+.Search-results-div h2 {
+    margin-left: 30px;
+    color: white;
+    opacity: 0.95;
+}
+
+.Search-results-div hr {
+    width: 90%;
+    opacity: 1;
+}
+
+.Search-results-div ul {
+    font-size: 12px;
+}
+
+
+

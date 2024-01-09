@@ -1,4 +1,4 @@
-const token = 'BQAQn0urDvI2ES_Dgg4ryCw_Vmf013iBAHVjDcWVS2e9tJAtuspd1JCgCk-rMRqVAsbigFqFnuFhUVPtgVPn4MZLs7WjbpZsJXWG-_BT8NdaQjbf-CI';
+const token = 'BQB_TRbwFGpCn6Uzhr9jg8ayJiNUHoTEzuqOILridziNM6JjnUnoBtRqDMLSF3wibqyilI_7Ngu6x1deHOCxrAjXvVVYHLRzznujGIhrSAf2JRYwgk4';
 
 async function fetchWebApi(endpoint, method = 'GET', body) {
   try {
@@ -13,8 +13,8 @@ async function fetchWebApi(endpoint, method = 'GET', body) {
     if (!result.ok) {
       throw new Error('Failed to fetch data');
     }
-
-    return await result.json();
+    const jsonInfo = await result.json();
+    return jsonInfo;
   } catch (error) {
     console.error('Error fetching data:', error.message);
     throw error;
@@ -23,9 +23,9 @@ async function fetchWebApi(endpoint, method = 'GET', body) {
 
 export default async function getSearchResults(searchKeyword) {
   try {
-    return (await fetchWebApi(
-      `v1/search?q=${searchKeyword}&type=track&limit=10`
-    )).items;
+    const trackInfo = await fetchWebApi(`v1/search?q=${searchKeyword}&type=track&limit=10`);
+    const trackItems = trackInfo.tracks.items;
+    return trackItems;
   } catch (error) {
     console.error('Error in getSearchResults:', error.message);
     throw error;

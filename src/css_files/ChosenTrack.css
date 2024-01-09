@@ -1,0 +1,71 @@
+.chosen-track-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px; /* Adjust width to take most of the width */
+}
+
+.chosen-track-div hr {
+    width: 100%;
+    margin-right: 20px; /* Adjust margin */
+    opacity: 0.4;
+}
+
+.chosen-track-div h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.track-artists-and-album {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1; /* Allow flex-grow to take available space */
+}
+
+.track-artists-and-album p {
+    margin-left: 5px;
+}
+
+.track-artists-and-album span {
+    margin: 0 10px;
+}
+
+
+.chosen-track-div button {
+    margin-right: -30px;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.chosen-track-div button:hover {
+    opacity: 0.5;
+    color: white;
+    transition: opacity 0.1s ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.chosen-track-div .remove {
+    width: 50px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .chosen-track-div {
+        width: 300px;
+        margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .chosen-track-div {
+        width: 150px;
+        margin-left: -30px;
+    }
+}

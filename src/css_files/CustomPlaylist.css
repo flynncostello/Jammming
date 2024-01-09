@@ -1,0 +1,45 @@
+.custom-playlist-div {
+    background-color: rgba(23, 4, 53, 0.7); /* Dark purple with opacity */
+    width: 50%;
+    min-height: 500px;
+    color: white;
+}
+
+.custom-playlist-div input[type="text"] {
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 10px; /* Set a fixed padding value */
+    border-radius: 0;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
+
+.custom-playlist-div input[type="text"]:focus {
+    opacity: 0.8;
+}
+
+.custom-playlist-div .custom-playlist-submit-button {
+    margin-bottom: 50px;
+    background-color: rgb(145, 46, 211);
+    border-radius: 30px;
+    padding: 20px 40px;
+    border-color: transparent;
+    box-shadow: 2px 1px 1px black;
+    font-weight: 500;
+}
+
+.custom-playlist-div .custom-playlist-submit-button:hover {
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    .custom-playlist-div input[type="text"] {
+        padding: 10px 50%;
+    }
+}
+
+
