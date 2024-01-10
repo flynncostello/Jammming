@@ -4,7 +4,7 @@ import generateId from "./utilities";
 import '../css_files/CustomPlaylist.css';
 
 
-export default function CustomPlaylist({ customPlaylist, saveCustomPlaylist, removeTrackFromCustomPlaylist }) {
+export default function CustomPlaylist({ customPlaylist, saveCustomPlaylistFunc, removeTrackFromCustomPlaylist }) {
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (event) => {
@@ -13,7 +13,7 @@ export default function CustomPlaylist({ customPlaylist, saveCustomPlaylist, rem
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        saveCustomPlaylist(event);
+        saveCustomPlaylistFunc(event, inputValue);
         setInputValue('');
     };
     
@@ -23,6 +23,7 @@ export default function CustomPlaylist({ customPlaylist, saveCustomPlaylist, rem
                 <input
                     type="text"
                     value={inputValue}
+                    placeholder="Playlist Name"
                     onChange={handleInputChange}
                 />
                 <ul>

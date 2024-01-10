@@ -6,8 +6,7 @@
 }
 
 .custom-playlist-div input[type="text"] {
-    color: white;
-    background-color: transparent;
+    color: black;
     border: none;
     padding: 10px; /* Set a fixed padding value */
     border-radius: 0;

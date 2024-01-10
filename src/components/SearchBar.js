@@ -12,7 +12,7 @@ export default function SearchBar({updateSearchInput}) {
 
     return (
         <form onSubmit={makeSearch}>
-            <input type="text" value={searchKeyword} onChange={(e) => setSearchKeyword(e.target.value)} />
+            <input type="text" placeholder="Enter Keyword" value={searchKeyword} onChange={(e) => setSearchKeyword(e.target.value)} />
             <button type="submit">SEARCH SONGS</button>
         </form>
     );

@@ -13,7 +13,8 @@ export default function SearchResultTrack({ track, updateCustomPlaylist }) {
         id: track.id,
         name: track.name,
         artists: getTrackArtists(track),
-        album: track.album.name
+        album: track.album.name,
+        uri: track.uri
     };
 
     return (
